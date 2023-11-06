@@ -65,8 +65,9 @@ class DateFeatureEngineer(FeatureEngineer):
             pd.DataFrame: The transformed DataFrame.
         """
         df[column] = pd.to_datetime(df[column], format=self.date_format)
-        df[f'{column}_month'] = df[column].dt.month
         df[f'{column}_year'] = df[column].dt.year
+        df[f'{column}_month'] = df[column].dt.month
+        
         return df
 
 #if __name__ == "__main__":

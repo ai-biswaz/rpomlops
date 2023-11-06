@@ -23,7 +23,7 @@ class CategoricalEncoder:
     def __init__(self, method: str ="onehot", categories: str ="auto"):
         self.method = method
         self.categories = categories
-        self.encoders = None
+        self.encoders = {}
         
     def fit(self, df: pd.DataFrame, columns) -> None:
         for col in columns:

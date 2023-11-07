@@ -4,7 +4,7 @@ from zenml.logger import get_logger
 logger = get_logger(__name__)
 from zenml.client import Client
 
-print(Client().active_stack.experiment_tracker.get_tracking_uri())
+#print(Client().active_stack.experiment_tracker.get_tracking_uri())
 
 from zenml import pipeline
 from zenml.config import DockerSettings
